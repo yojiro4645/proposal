@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>喰庵しゅう坊｜信州中野の居酒屋・おまかせ料理と個室</title>
+<meta name="description" content="信州中野駅から徒歩約12分。旬の刺身、だし巻き、天ぷら、マスターのおまかせ料理。個室・駐車場あり。ご予約はお電話で。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;800&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --sumi:#1b1612;
+  --sumi2:#251e18;
+  --wood:#b7834f;
+  --wood-light:#e2c39a;
+  --amber:#e9a54b;
+  --paper:#f5eee3;
+  --paper2:#ebe1d1;
+  --ink:#2a221b;
+  --muted:#8b7c6b;
+  --line:rgba(226,195,154,.22);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"Zen Kaku Gothic New",system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+.mincho{font-family:"Shippori Mincho",serif}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+
+/* sample notice */
+.notice{background:#6b4a2b;color:#f7e7cf;font-size:12px;text-align:center;padding:6px 12px;letter-spacing:.08em}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(27,22,18,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:12px 20px;color:var(--paper)}
+.logo{font-family:"Shippori Mincho",serif;font-weight:800;font-size:20px;letter-spacing:.18em}
+.logo small{display:block;font-size:10px;letter-spacing:.3em;color:var(--wood-light);font-weight:400;margin-top:-4px}
+.nav ul{display:flex;gap:26px;list-style:none;font-size:13px;letter-spacing:.14em}
+.nav ul a{opacity:.85}
+.nav ul a:hover{opacity:1;color:var(--amber)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden;font-size:11px}
+.lang button{background:none;border:0;color:var(--paper);padding:5px 10px;cursor:pointer;letter-spacing:.1em;font-family:inherit}
+.lang button.on{background:var(--wood);color:var(--sumi)}
+.btn-tel{background:var(--amber);color:var(--sumi);font-weight:700;font-size:13px;padding:8px 16px;border-radius:2px;letter-spacing:.1em;white-space:nowrap}
+@media(max-width:860px){.nav ul{display:none}.btn-tel.head{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:88vh;background:var(--sumi);color:var(--paper);overflow:hidden;display:flex;align-items:center}
+.hero{background:url("https://images.unsplash.com/photo-1696449241254-11cf7f18ce32?auto=format&fit=crop&w=1800&q=75") center/cover no-repeat,var(--sumi)}
+.hero::before{content:"";position:absolute;inset:0;
+  background:
+   linear-gradient(90deg,rgba(20,15,11,.92) 0%,rgba(20,15,11,.75) 45%,rgba(20,15,11,.35) 100%),
+   radial-gradient(ellipse at 70% 40%,rgba(233,165,75,.28),transparent 55%),
+   radial-gradient(ellipse at 20% 90%,rgba(183,131,79,.18),transparent 60%);
+}
+/* lattice (kōshi) drawn in CSS */
+.lattice{position:absolute;right:-40px;top:0;bottom:0;width:min(520px,55vw);opacity:.55;
+  background:
+   repeating-linear-gradient(90deg,transparent 0 34px,rgba(183,131,79,.55) 34px 40px),
+   repeating-linear-gradient(0deg,transparent 0 34px,rgba(183,131,79,.55) 34px 40px);
+  mask-image:linear-gradient(90deg,transparent,#000 35%);
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 35%);
+}
+.lantern{position:absolute;right:18%;top:14%;width:90px;height:130px;border-radius:45%/40%;
+  background:radial-gradient(circle at 50% 45%,#ffd79a,#e9a54b 45%,#a6582a 100%);
+  box-shadow:0 0 80px 30px rgba(233,165,75,.35);opacity:.9}
+.lantern::before,.lantern::after{content:"";position:absolute;left:30%;right:30%;height:10px;background:#2a1d13;border-radius:2px}
+.lantern::before{top:-6px}.lantern::after{bottom:-6px}
+.hero-inner{position:relative;max-width:1120px;margin:0 auto;padding:80px 24px;width:100%;display:flex;gap:56px;align-items:center}
+.tate{writing-mode:vertical-rl;font-family:"Shippori Mincho",serif;font-weight:800;font-size:clamp(44px,7vw,84px);letter-spacing:.22em;line-height:1.2;color:var(--paper);text-shadow:0 4px 30px rgba(0,0,0,.4)}
+.tate span{display:block;font-size:.32em;letter-spacing:.5em;color:var(--wood-light);font-weight:400;margin-right:.4em}
+.hero-copy{max-width:460px}
+.hero-copy .catch{font-family:"Shippori Mincho",serif;font-size:clamp(22px,3vw,32px);line-height:1.7;font-weight:600;margin-bottom:20px}
+.hero-copy p{color:#d9cbb6;font-size:15px}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;font-size:14px;letter-spacing:.14em;border-radius:2px;font-weight:700}
+.btn.primary{background:var(--amber);color:var(--sumi)}
+.btn.ghost{border:1px solid var(--wood-light);color:var(--paper)}
+.hero-meta{margin-top:28px;font-size:12px;color:var(--wood-light);letter-spacing:.16em}
+@media(max-width:700px){.hero-inner{flex-direction:column;align-items:flex-start;gap:28px;padding:60px 22px 90px}.tate{writing-mode:horizontal-tb;letter-spacing:.12em}.tate span{display:inline;margin:0 0 0 .6em;letter-spacing:.3em}.lantern{right:10%;top:8%;width:60px;height:86px}}
+
+/* sections */
+section{padding:110px 24px}
+.wrap{max-width:1080px;margin:0 auto}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:48px}
+.sec-head .en{font-size:11px;letter-spacing:.4em;color:var(--wood);text-transform:uppercase}
+.sec-head h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,3.4vw,36px);font-weight:600;letter-spacing:.14em}
+.dark{background:var(--sumi2);color:var(--paper)}
+.dark .sec-head .en{color:var(--amber)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:center}
+.about-text p{margin-bottom:18px;font-size:15.5px}
+.about-text .lead{font-family:"Shippori Mincho",serif;font-size:24px;line-height:1.8;margin-bottom:26px;font-weight:600}
+.photo{position:relative;aspect-ratio:4/3;border-radius:2px;overflow:hidden;background:#2b1d13;box-shadow:0 20px 40px -20px rgba(0,0,0,.45)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.photo:hover img{transform:scale(1.04)}
+.dish .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.dish:hover .ph img{transform:scale(1.05)}
+@media(max-width:820px){.about-grid{grid-template-columns:1fr;gap:36px}}
+
+/* points */
+.points{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:70px}
+.point{background:var(--paper);padding:30px 26px}
+.point .num{font-family:"Shippori Mincho",serif;color:var(--wood);font-size:28px;line-height:1}
+.point h3{font-family:"Shippori Mincho",serif;font-size:18px;margin:12px 0 8px;letter-spacing:.1em}
+.point p{font-size:14px;color:#5d5045}
+@media(max-width:820px){.points{grid-template-columns:1fr}}
+
+/* menu */
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:22px}
+.dish{border:1px solid var(--line);padding:0 0 22px;background:rgba(255,255,255,.02)}
+.dish .ph{aspect-ratio:4/3;margin-bottom:18px;position:relative;overflow:hidden}
+.dish .ph svg{width:100%;height:100%}
+.dish h3{font-family:"Shippori Mincho",serif;font-size:19px;letter-spacing:.12em;padding:0 20px}
+.dish .tag{display:inline-block;font-size:10px;letter-spacing:.2em;color:var(--sumi);background:var(--amber);padding:1px 8px;margin:6px 20px 8px}
+.dish p{font-size:13.5px;color:#cbbba5;padding:0 20px;line-height:1.8}
+.menu-note{margin-top:30px;font-size:12.5px;color:#a9998a}
+
+/* omakase */
+.omakase{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:stretch}
+.omakase-card{background:var(--sumi);color:var(--paper);padding:48px 40px;position:relative;overflow:hidden}
+.omakase-card::after{content:"任";position:absolute;right:-10px;bottom:-60px;font-family:"Shippori Mincho",serif;font-size:260px;color:rgba(233,165,75,.08);line-height:1}
+.omakase-card h3{font-family:"Shippori Mincho",serif;font-size:26px;letter-spacing:.14em;margin-bottom:18px}
+.omakase-card p{color:#d6c7b1;font-size:14.5px;margin-bottom:14px;position:relative;z-index:1}
+.steps{list-style:none;counter-reset:s}
+.steps li{counter-increment:s;padding:20px 0 20px 60px;position:relative;border-bottom:1px solid #d8ccb9}
+.steps li::before{content:counter(s,decimal-leading-zero);position:absolute;left:0;top:18px;font-family:"Shippori Mincho",serif;font-size:26px;color:var(--wood)}
+.steps strong{display:block;font-family:"Shippori Mincho",serif;font-size:17px;letter-spacing:.1em}
+.steps span{font-size:14px;color:#5d5045}
+@media(max-width:820px){.omakase{grid-template-columns:1fr;gap:30px}.omakase-card{padding:36px 26px}}
+
+/* space */
+.space-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.space-grid .photo{aspect-ratio:3/4}
+.space-grid h3{font-family:"Shippori Mincho",serif;font-size:17px;letter-spacing:.12em;margin:16px 0 4px}
+.space-grid p{font-size:13.5px;color:#5d5045}
+@media(max-width:820px){.space-grid{grid-template-columns:1fr}.space-grid .photo{aspect-ratio:16/10}}
+
+/* voice */
+.voice{display:flex;align-items:center;gap:40px;flex-wrap:wrap;margin-top:70px;padding:34px 36px;background:var(--paper2);border-left:3px solid var(--wood)}
+.voice .score{font-family:"Shippori Mincho",serif;font-size:54px;line-height:1;color:var(--ink)}
+.voice .score small{font-size:13px;color:var(--muted);display:block;letter-spacing:.12em;margin-top:6px;font-family:"Zen Kaku Gothic New",sans-serif}
+.voice ul{list-style:none;flex:1;min-width:260px}
+.voice li{font-size:14px;padding:4px 0 4px 18px;position:relative}
+.voice li::before{content:"";position:absolute;left:0;top:14px;width:8px;height:1px;background:var(--wood)}
+
+/* reserve */
+.reserve{text-align:center;background:
+  radial-gradient(ellipse at 50% 0%,rgba(233,165,75,.25),transparent 60%),var(--sumi);color:var(--paper)}
+.reserve h2{font-family:"Shippori Mincho",serif;font-size:clamp(26px,3.6vw,38px);letter-spacing:.16em;margin-bottom:18px}
+.reserve p{color:#d6c7b1;font-size:15px}
+.tel-big{display:inline-block;margin:34px 0 16px;font-family:"Shippori Mincho",serif;font-size:clamp(34px,6vw,56px);letter-spacing:.08em;color:var(--amber);border-bottom:1px solid rgba(233,165,75,.4);padding-bottom:6px}
+.reserve small{display:block;color:#a9998a;font-size:12.5px}
+
+/* access */
+.access-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:48px}
+.info{width:100%;border-collapse:collapse;font-size:14.5px}
+.info th,.info td{text-align:left;padding:16px 0;border-bottom:1px solid #d8ccb9;vertical-align:top}
+.info th{width:110px;font-weight:500;color:var(--muted);letter-spacing:.14em;font-size:13px}
+.map{min-height:360px;border:0;width:100%;height:100%;filter:sepia(.25) saturate(.8)}
+@media(max-width:820px){.access-grid{grid-template-columns:1fr}}
+
+footer{background:#120e0b;color:#8f8070;text-align:center;padding:44px 20px 100px;font-size:12px;letter-spacing:.14em}
+footer .logo{color:var(--paper);margin-bottom:10px}
+
+/* mobile call bar */
+.callbar{display:none}
+@media(max-width:860px){
+  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(27,22,18,.96);border-top:1px solid var(--line);padding:10px 14px;gap:10px}
+  .callbar a{flex:1;text-align:center;padding:12px;font-size:14px;font-weight:700;letter-spacing:.12em;border-radius:2px}
+  .callbar .c1{background:var(--amber);color:var(--sumi)}
+  .callbar .c2{border:1px solid var(--wood-light);color:var(--paper)}
+}
+
+/* fade in */
+.fade{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+
+/* i18n */
+[data-en]{}
+body.en .ja-only{display:none}
+body:not(.en) .en-only{display:none}
+</style>
+</head>
+<body>
+
+<div class="notice"><span data-ja="ご提案用サンプルサイトです（写真はイメージ素材・価格は未掲載）" data-en="Sample website for proposal — photos are stock images">ご提案用サンプルサイトです（写真はイメージ素材・価格は未掲載）</span></div>
+
+<header>
+  <nav class="nav">
+    <a href="#top" class="logo">喰庵しゅう坊<small>KURAIAN SHUBOU</small></a>
+    <ul>
+      <li><a href="#about" data-ja="お店について" data-en="About">お店について</a></li>
+      <li><a href="#menu" data-ja="お料理" data-en="Food">お料理</a></li>
+      <li><a href="#omakase" data-ja="おまかせ" data-en="Omakase">おまかせ</a></li>
+      <li><a href="#space" data-ja="店内" data-en="Space">店内</a></li>
+      <li><a href="#access" data-ja="アクセス" data-en="Access">アクセス</a></li>
+    </ul>
+    <div class="nav-right">
+      <div class="lang" role="group" aria-label="Language">
+        <button class="on" data-lang="ja">日本語</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a class="btn-tel head" href="tel:0269246002" data-ja="電話で予約" data-en="Call to book">電話で予約</a>
+    </div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<div class="hero" id="top">
+    <div class="hero-inner">
+    <h1 class="tate">喰庵<br>しゅう坊<span>信州中野</span></h1>
+    <div class="hero-copy">
+      <p class="catch mincho" data-ja="その日いちばんの肴を、<br>マスターのおまかせで。" data-en="Tonight's finest,<br>left to the master.">その日いちばんの肴を、<br>マスターのおまかせで。</p>
+      <p data-ja="木のぬくもりに包まれたカウンターと個室。旬の刺身、ふっくらだし巻き、揚げたての天ぷら。信州中野の夜を、ゆっくりと。" data-en="A warm wooden counter and private rooms. Seasonal sashimi, fluffy dashi-maki omelette, crisp tempura — take your time on a Shinshu-Nakano evening.">木のぬくもりに包まれたカウンターと個室。旬の刺身、ふっくらだし巻き、揚げたての天ぷら。信州中野の夜を、ゆっくりと。</p>
+      <div class="hero-cta">
+        <a class="btn primary" href="tel:0269246002">☎ <span data-ja="0269-24-6002" data-en="+81 269-24-6002">0269-24-6002</span></a>
+        <a class="btn ghost" href="#menu" data-ja="お料理を見る" data-en="See the food">お料理を見る</a>
+      </div>
+      <p class="hero-meta" data-ja="17:30 OPEN ／ 水曜定休 ／ 個室・駐車場あり" data-en="Opens 17:30 / Closed Wed / Private rooms & parking">17:30 OPEN ／ 水曜定休 ／ 個室・駐車場あり</p>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head fade"><h2 data-ja="お店について" data-en="About us">お店について</h2><span class="en">About</span></div>
+    <div class="about-grid">
+      <div class="about-text fade">
+        <p class="lead" data-ja="チェーン店にはない、<br>ひと皿ずつの手仕事を。" data-en="Handmade, plate by plate —<br>the way chains can't.">チェーン店にはない、<br>ひと皿ずつの手仕事を。</p>
+        <p data-ja="喰庵しゅう坊は、信州中野駅から歩いて十数分、小田中の住宅街にたたずむ小さな居酒屋です。" data-en="Kuraian Shubou is a small izakaya tucked into the quiet Kodanaka neighborhood, about a 12-minute walk from Shinshu-Nakano Station.">喰庵しゅう坊は、信州中野駅から歩いて十数分、小田中の住宅街にたたずむ小さな居酒屋です。</p>
+        <p data-ja="カウンターの向こうで包丁を握るマスターが、その日の仕入れを見て献立を考えます。メニューに載っていない一品が出てくることも少なくありません。ご予算とお好みを伝えていただければ、あとはおまかせください。" data-en="Behind the counter, the master plans each night around what came in that day — often dishes you won't find on the menu. Tell us your budget and tastes, and leave the rest to us.">カウンターの向こうで包丁を握るマスターが、その日の仕入れを見て献立を考えます。メニューに載っていない一品が出てくることも少なくありません。ご予算とお好みを伝えていただければ、あとはおまかせください。</p>
+        <p data-ja="グラスが空く前にそっと声をかける。そんな気配りも、この店の味のうちです。" data-en="We'll check on you before your glass runs dry — that care is part of the flavor here.">グラスが空く前にそっと声をかける。そんな気配りも、この店の味のうちです。</p>
+      </div>
+      <div class="photo fade"><img src="https://images.unsplash.com/photo-1767265581515-afe9ff46ad76?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy"></div>
+    </div>
+
+    <div class="points fade">
+      <div class="point"><div class="num">一</div><h3 data-ja="おまかせ料理" data-en="Omakase">おまかせ料理</h3><p data-ja="ご予算を伝えるだけ。その日いちばんの食材で、マスターが組み立てます。" data-en="Just name your budget — the master builds the meal from the day's best.">ご予算を伝えるだけ。その日いちばんの食材で、マスターが組み立てます。</p></div>
+      <div class="point"><div class="num">二</div><h3 data-ja="個室・貸切" data-en="Private rooms">個室・貸切</h3><p data-ja="ご家族の集まり、接待、少人数の宴会に。貸切のご相談もどうぞ。" data-en="For families, business dinners and small parties. Full buy-outs available.">ご家族の集まり、接待、少人数の宴会に。貸切のご相談もどうぞ。</p></div>
+      <div class="point"><div class="num">三</div><h3 data-ja="駐車場あり" data-en="Parking">駐車場あり</h3><p data-ja="お店の前に駐車場があります。お車でのご来店も安心です。" data-en="Parking available right at the restaurant.">お店の前に駐車場があります。お車でのご来店も安心です。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section id="menu" class="dark">
+  <div class="wrap">
+    <div class="sec-head fade"><h2 data-ja="お料理" data-en="Our food">お料理</h2><span class="en">Food</span></div>
+    <div class="menu-grid">
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1789680161942-437096f9ae86?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="刺身盛り合わせ" data-en="Sashimi platter">刺身盛り合わせ</h3><span class="tag">SIGNATURE</span>
+        <p data-ja="その日の仕入れで内容が変わる、店いちばんの人気。チェーン店とはひと味ちがう鮮度です。" data-en="Changes with the day's catch — our most popular plate, with freshness you won't get at a chain.">その日の仕入れで内容が変わる、店いちばんの人気。チェーン店とはひと味ちがう鮮度です。</p>
+      </article>
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1763469026635-1fc183540435?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="だし巻き玉子" data-en="Dashi-maki omelette">だし巻き玉子</h3><span class="tag">POPULAR</span>
+        <p data-ja="ひと切れごとにだしがじゅわり。焼きたてをカウンター越しにどうぞ。" data-en="Juicy with dashi in every slice, served hot across the counter.">ひと切れごとにだしがじゅわり。焼きたてをカウンター越しにどうぞ。</p>
+      </article>
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1770966666356-3f022a79b8ea?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="冷製茶碗蒸し" data-en="Chilled chawanmushi">冷製茶碗蒸し</h3><span class="tag">OTOSHI</span>
+        <p data-ja="お通しとしてお出しすることの多い一品。つるりとした口当たりで、最初の一杯が進みます。" data-en="Often served as our starter — silky and cool, the perfect partner for your first drink.">お通しとしてお出しすることの多い一品。つるりとした口当たりで、最初の一杯が進みます。</p>
+      </article>
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1570078362689-c57c33cca104?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="天ぷら" data-en="Tempura">天ぷら</h3>
+        <p data-ja="さっくり揚げたてを、熱いうちにどうぞ。" data-en="Light and crisp — enjoy it hot.">さっくり揚げたてを、熱いうちにどうぞ。</p>
+      </article>
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1615510730341-d032b22c563d?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="つけ焼きそば" data-en="Dipping yakisoba">つけ焼きそば</h3><span class="tag">SHIME</span>
+        <p data-ja="半熟卵を添えた、しゅう坊ならではの〆の一品。" data-en="Our signature finisher, served with a soft-boiled egg.">半熟卵を添えた、しゅう坊ならではの〆の一品。</p>
+      </article>
+      <article class="dish fade">
+        <div class="ph"><img src="https://images.unsplash.com/photo-1626379907753-406934326e2c?auto=format&fit=crop&w=700&h=525&q=75" alt="" loading="lazy"></div>
+        <h3 data-ja="信州の地酒" data-en="Local sake">信州の地酒</h3>
+        <p data-ja="料理に合わせた一杯を、マスターがおすすめします。" data-en="The master will recommend a sake to pair with your food.">料理に合わせた一杯を、マスターがおすすめします。</p>
+      </article>
+    </div>
+    <p class="menu-note" data-ja="※ 内容は仕入れにより変わります。価格・最新メニューはお店で確認後に掲載します。" data-en="* Dishes change with the season. Prices to be added after confirmation with the restaurant.">※ 内容は仕入れにより変わります。価格・最新メニューはお店で確認後に掲載します。</p>
+  </div>
+</section>
+
+<!-- OMAKASE -->
+<section id="omakase">
+  <div class="wrap">
+    <div class="sec-head fade"><h2 data-ja="おまかせ・コース" data-en="Omakase & courses">おまかせ・コース</h2><span class="en">Omakase</span></div>
+    <div class="omakase">
+      <div class="omakase-card fade">
+        <h3 data-ja="迷ったら、おまかせで。" data-en="Not sure? Leave it to us.">迷ったら、おまかせで。</h3>
+        <p data-ja="「メニューにないものばかり出てくる」と常連さんに言われる、しゅう坊のおまかせ。ご予算に合わせて、その日の旬を一皿ずつ組み立てます。" data-en="Regulars say our omakase is full of dishes that aren't on the menu. We build it plate by plate around the season, to fit your budget.">「メニューにないものばかり出てくる」と常連さんに言われる、しゅう坊のおまかせ。ご予算に合わせて、その日の旬を一皿ずつ組み立てます。</p>
+        <p data-ja="宴会・記念日のコースもご用意できます。苦手な食材やアレルギーは、ご予約時にお知らせください。" data-en="Courses for parties and celebrations are also available. Let us know about allergies or dislikes when booking.">宴会・記念日のコースもご用意できます。苦手な食材やアレルギーは、ご予約時にお知らせください。</p>
+        <p class="en-only" style="color:var(--amber)">English-friendly: no Japanese needed — just tell us your budget per person.</p>
+      </div>
+      <ol class="steps fade">
+        <li><strong data-ja="お電話でご予約" data-en="Call to reserve">お電話でご予約</strong><span data-ja="日時・人数・ご予算をお伝えください。" data-en="Tell us the date, number of guests and budget.">日時・人数・ご予算をお伝えください。</span></li>
+        <li><strong data-ja="お好みをひとこと" data-en="Share your preferences">お好みをひとこと</strong><span data-ja="「魚多めで」「日本酒に合うもの」など、なんでも。" data-en="'More fish', 'goes well with sake' — anything helps.">「魚多めで」「日本酒に合うもの」など、なんでも。</span></li>
+        <li><strong data-ja="当日はおまかせ" data-en="Relax and enjoy">当日はおまかせ</strong><span data-ja="混み合う日は、先に数品ご用意しておくこともできます。" data-en="On busy nights we can have the first few dishes ready when you arrive.">混み合う日は、先に数品ご用意しておくこともできます。</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- SPACE -->
+<section id="space" style="background:var(--paper2)">
+  <div class="wrap">
+    <div class="sec-head fade"><h2 data-ja="店内" data-en="The space">店内</h2><span class="en">Space</span></div>
+    <div class="space-grid">
+      <div class="fade"><div class="photo"><img src="https://images.unsplash.com/photo-1787931597082-50d92f5287dc?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy"></div><h3 data-ja="カウンター" data-en="Counter">カウンター</h3><p data-ja="マスターの手元が見える特等席。おひとりさまも歓迎です。" data-en="Watch the master at work. Solo guests welcome.">マスターの手元が見える特等席。おひとりさまも歓迎です。</p></div>
+      <div class="fade"><div class="photo"><img src="https://images.unsplash.com/photo-1622140739492-f82f386260b5?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy"></div><h3 data-ja="テーブル席" data-en="Tables">テーブル席</h3><p data-ja="木の格子でゆるやかに仕切られた、落ち着いたお席です。" data-en="Calm tables, gently screened by wooden lattices.">木の格子でゆるやかに仕切られた、落ち着いたお席です。</p></div>
+      <div class="fade"><div class="photo"><img src="https://images.unsplash.com/photo-1610375233775-6e0166927193?auto=format&fit=crop&w=900&q=75" alt="" loading="lazy"></div><h3 data-ja="個室" data-en="Private room">個室</h3><p data-ja="ご家族やグループで、周りを気にせずお過ごしいただけます。" data-en="Enjoy your evening without worrying about the next table.">ご家族やグループで、周りを気にせずお過ごしいただけます。</p></div>
+    </div>
+
+    <div class="voice fade">
+      <div class="score">4.4<small data-ja="Googleクチコミ 80件" data-en="80 Google reviews">Googleクチコミ 80件</small></div>
+      <ul>
+        <li data-ja="刺身の盛り合わせが、チェーン店とはまるで違う" data-en="The sashimi platter is nothing like a chain's">刺身の盛り合わせが、チェーン店とはまるで違う</li>
+        <li data-ja="頼む前に声をかけてくれる、細やかな接客" data-en="Attentive service — they ask before you need to">頼む前に声をかけてくれる、細やかな接客</li>
+        <li data-ja="言葉が通じなくても、おまかせで全部おいしかった（海外のお客様）" data-en="We don't speak Japanese, but the omakase was excellent (overseas guest)">言葉が通じなくても、おまかせで全部おいしかった（海外のお客様）</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVE -->
+<section class="reserve" id="reserve">
+  <div class="wrap fade">
+    <p style="font-size:11px;letter-spacing:.4em;color:var(--amber)">RESERVATION</p>
+    <h2 data-ja="ご予約・お問い合わせ" data-en="Reservations">ご予約・お問い合わせ</h2>
+    <p data-ja="週末や宴会シーズンは混み合います。お早めにお電話ください。" data-en="Weekends fill up quickly — please call ahead.">週末や宴会シーズンは混み合います。お早めにお電話ください。</p>
+    <a class="tel-big" href="tel:0269246002">0269-24-6002</a>
+    <small data-ja="受付 17:30〜 ／ 水曜定休" data-en="From 17:30 / Closed Wednesdays">受付 17:30〜 ／ 水曜定休</small>
+  </div>
+</section>
+
+<!-- ACCESS -->
+<section id="access">
+  <div class="wrap">
+    <div class="sec-head fade"><h2 data-ja="店舗情報・アクセス" data-en="Info & access">店舗情報・アクセス</h2><span class="en">Access</span></div>
+    <div class="access-grid">
+      <table class="info fade">
+        <tr><th data-ja="店名" data-en="Name">店名</th><td>喰庵しゅう坊</td></tr>
+        <tr><th data-ja="住所" data-en="Address">住所</th><td data-ja="〒383-0031<br>長野県中野市大字小田中1-420-1" data-en="1-420-1 Kodanaka, Nakano,<br>Nagano 383-0031">〒383-0031<br>長野県中野市大字小田中1-420-1</td></tr>
+        <tr><th data-ja="電話" data-en="Phone"><span>電話</span></th><td><a href="tel:0269246002">0269-24-6002</a></td></tr>
+        <tr><th data-ja="営業時間" data-en="Hours">営業時間</th><td data-ja="17:30〜22:00<br>日曜 17:30〜21:00" data-en="17:30–22:00<br>Sun 17:30–21:00">17:30〜22:00<br>日曜 17:30〜21:00</td></tr>
+        <tr><th data-ja="定休日" data-en="Closed">定休日</th><td data-ja="水曜日" data-en="Wednesday">水曜日</td></tr>
+        <tr><th data-ja="アクセス" data-en="Access">アクセス</th><td data-ja="長野電鉄 信州中野駅から徒歩約12分" data-en="12 min walk from Shinshu-Nakano Sta. (Nagano Dentetsu)">長野電鉄 信州中野駅から徒歩約12分</td></tr>
+        <tr><th data-ja="設備" data-en="Facilities">設備</th><td data-ja="個室あり・貸切可・駐車場あり" data-en="Private rooms, buy-outs, parking">個室あり・貸切可・駐車場あり</td></tr>
+        <tr><th data-ja="お支払い" data-en="Payment">お支払い</th><td data-ja="現金（カード不可）" data-en="Cash only">現金（カード不可）</td></tr>
+      </table>
+      <iframe class="map fade" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=%E5%96%B0%E5%BA%B5%E3%81%97%E3%82%85%E3%81%86%E5%9D%8A%20%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%AD%E9%87%8E%E5%B8%82%E5%B0%8F%E7%94%B0%E4%B8%AD1-420-1&output=embed" title="Map"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">喰庵しゅう坊</div>
+  <p data-ja="長野県中野市大字小田中1-420-1 ／ 0269-24-6002" data-en="1-420-1 Kodanaka, Nakano, Nagano / +81 269-24-6002">長野県中野市大字小田中1-420-1 ／ 0269-24-6002</p>
+  <p style="margin-top:8px;font-size:10px;opacity:.6">Photos: Unsplash（イメージ）</p>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:0269246002" data-ja="☎ 電話で予約" data-en="☎ Call to book">☎ 電話で予約</a>
+  <a class="c2" href="#access" data-ja="アクセス" data-en="Map">アクセス</a>
+</div>
+
+<script>
+// language toggle
+const btns=document.querySelectorAll('.lang button');
+function setLang(l){
+  document.body.classList.toggle('en',l==='en');
+  document.documentElement.lang=l;
+  document.querySelectorAll('[data-ja]').forEach(el=>{el.innerHTML=el.dataset[l]||el.dataset.ja});
+  btns.forEach(b=>b.classList.toggle('on',b.dataset.lang===l));
+}
+btns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+// fade-in
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
