@@ -1,8 +1,8 @@
-# proposal-sites
+# proposal
 
 営業提案用のサンプルサイト置き場（店ごとにフォルダを分ける）。
 
-- 公開URL: https://yojiro4645.github.io/proposal-sites/<店フォルダ>/
+- 公開URL: https://yojiro4645.github.io/proposal/<店フォルダ>/
 - 全ページに noindex メタタグを入れて検索除外
 - 成約したら正式ドメインへ移行してフォルダ削除／不成約は期限後に削除
 
