@@ -318,5 +318,13 @@ a:hover{color:#155A68}
 </footer>
 
 </div>
+<script>
+document.addEventListener('click',function(e){
+  var m=document.getElementById('sp-menu'),b=document.querySelector('.sp-menu-btn');
+  if(!m||m.hidden)return;
+  if(m.contains(e.target)||b.contains(e.target))return;
+  m.hidden=true;b.setAttribute('aria-expanded','false');
+});
+</script>
 </body>
 </html>
