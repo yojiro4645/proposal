@@ -202,13 +202,13 @@ body:not(.en) .en-only{display:none}
   background:linear-gradient(90deg,rgba(20,15,11,.9) 0%,rgba(20,15,11,.7) 45%,rgba(20,15,11,.25) 100%)}
 .j-hero.on{pointer-events:auto}
 @media(max-width:700px){.j-hero{background:linear-gradient(180deg,rgba(20,15,11,.55),rgba(20,15,11,.88))}.j-progress{right:12px}.j-hint{bottom:96px}.j-caps{bottom:22%}}
-@media(prefers-reduced-motion:reduce){.journey{height:100vh}.j-layer{opacity:0!important}.j-layer:last-of-type{opacity:1!important}.j-cap,.j-hint,.j-progress{display:none}.j-hero{opacity:1;pointer-events:auto}}
+@media(prefers-reduced-motion:reduce){.journey{height:100vh}.j-layer{opacity:0!important}.j-layer.j-last{opacity:1!important}.j-cap,.j-hint,.j-progress{display:none}.j-hero{opacity:1;pointer-events:auto}}
 body.en .tate{writing-mode:horizontal-tb;letter-spacing:.06em;font-size:clamp(40px,6vw,72px)}
 body.en .tate span{display:block;letter-spacing:.3em;margin:10px 0 0}
 body.en .logo{letter-spacing:.08em}
 .journey.done{height:100vh;height:100svh}
 .journey.done .j-layer{opacity:0!important;transform:none!important}
-.journey.done .j-layer:last-of-type{opacity:1!important}
+.journey.done .j-layer.j-last{opacity:1!important}
 .journey.done .j-cap,.journey.done .j-hint,.journey.done .j-progress{display:none}
 .journey.done .j-hero{opacity:1!important;pointer-events:auto}
 </style>
@@ -238,7 +238,7 @@ body.en .logo{letter-spacing:.08em}
 <!-- HERO / WALK-IN JOURNEY -->
 <section class="journey" id="top" aria-label="店の前から店内へ">
   <div class="j-stage">
-    <div class="j-layer" data-o="78% 40%" style="background-image:url('https://images.unsplash.com/photo-1674949018662-02044a6b2b1a?auto=format&fit=crop&w=1600&q=75');background-position:78% 40%;transform-origin:78% 40%"></div><div class="j-layer" data-o="38% 62%" style="background-image:url('https://images.unsplash.com/photo-1614640522775-71bebddd21f9?auto=format&fit=crop&w=1600&q=75');background-position:38% 62%;transform-origin:38% 62%"></div><div class="j-layer" data-o="50% 62%" style="background-image:url('https://images.unsplash.com/photo-1610205642154-5dfed9199eae?auto=format&fit=crop&w=1600&q=75');background-position:50% 62%;transform-origin:50% 62%"></div><div class="j-layer" data-o="62% 55%" style="background-image:url('https://images.unsplash.com/photo-1600506112440-cd3b52c88cfe?auto=format&fit=crop&w=1600&q=75');background-position:62% 55%;transform-origin:62% 55%"></div><div class="j-layer" data-o="50% 50%" style="background-image:url('https://images.unsplash.com/photo-1696449241254-11cf7f18ce32?auto=format&fit=crop&w=1600&q=75');background-position:50% 50%;transform-origin:50% 50%"></div>
+    <div class="j-layer" data-o="78% 40%" style="background-image:url('https://images.unsplash.com/photo-1674949018662-02044a6b2b1a?auto=format&fit=crop&w=1600&q=75');background-position:78% 40%;transform-origin:78% 40%"></div><div class="j-layer" data-o="38% 62%" style="background-image:url('https://images.unsplash.com/photo-1614640522775-71bebddd21f9?auto=format&fit=crop&w=1600&q=75');background-position:38% 62%;transform-origin:38% 62%"></div><div class="j-layer" data-o="50% 62%" style="background-image:url('https://images.unsplash.com/photo-1610205642154-5dfed9199eae?auto=format&fit=crop&w=1600&q=75');background-position:50% 62%;transform-origin:50% 62%"></div><div class="j-layer" data-o="62% 55%" style="background-image:url('https://images.unsplash.com/photo-1600506112440-cd3b52c88cfe?auto=format&fit=crop&w=1600&q=75');background-position:62% 55%;transform-origin:62% 55%"></div><div class="j-layer j-last" data-o="50% 50%" style="background-image:url('https://images.unsplash.com/photo-1696449241254-11cf7f18ce32?auto=format&fit=crop&w=1600&q=75');background-position:50% 50%;transform-origin:50% 50%"></div>
     <div class="j-shade"></div>
     <div class="j-caps"><p class="j-cap mincho" data-ja="小田中の住宅街に、ぽつりと灯る明かり。" data-en="A single warm light on a quiet Kodanaka street.">小田中の住宅街に、ぽつりと灯る明かり。</p><p class="j-cap mincho" data-ja="木の格子戸の向こうから、だしの香り。" data-en="Through the wooden lattice door — the scent of dashi.">木の格子戸の向こうから、だしの香り。</p><p class="j-cap mincho" data-ja="暖簾をくぐれば、" data-en="Step under the noren curtain…">暖簾をくぐれば、</p><p class="j-cap mincho" data-ja="カウンターの向こうに、マスター。" data-en="…and the master is waiting behind the counter.">カウンターの向こうに、マスター。</p></div>
     <div class="j-hint" data-ja="スクロールして、お店の中へ" data-en="Scroll to step inside">スクロールして、お店の中へ</div>
