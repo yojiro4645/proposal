@@ -438,7 +438,7 @@ document.querySelectorAll('.fade').forEach(el=>io.observe(el));
     sec.classList.add('done');
     if(!keepScroll){
       // land on the finished main visual and absorb leftover scroll momentum
-      window.scrollTo(0,0);
+      window.scrollTo({top:0,left:0,behavior:'instant'});
       addEventListener('wheel',block,{passive:false}); addEventListener('touchmove',block,{passive:false});
       setTimeout(()=>{removeEventListener('wheel',block);removeEventListener('touchmove',block)},900);
     }
@@ -469,7 +469,7 @@ document.querySelectorAll('.fade').forEach(el=>io.observe(el));
   skip.addEventListener('click',()=>finish(false));
   document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>finish(true)));
   if('scrollRestoration' in history) history.scrollRestoration='manual';
-  window.scrollTo(0,0); draw();
+  window.scrollTo({top:0,left:0,behavior:'instant'}); draw();
 })();
 </script>
 </body>
