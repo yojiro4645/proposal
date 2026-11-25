@@ -186,7 +186,7 @@ body.en .ja-only{display:none}
 body:not(.en) .en-only{display:none}
 
 /* ===== walk-in journey ===== */
-.journey{position:relative;height:100vh;height:100svh;background:#0d0a08;padding:0}
+.journey{position:relative;height:420vh;background:#0d0a08;padding:0}
 .j-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;color:var(--paper)}
 .j-layer{position:absolute;inset:0;background-size:cover;will-change:transform,opacity;opacity:0}
 .j-layer:first-child{opacity:1}
@@ -202,7 +202,7 @@ body:not(.en) .en-only{display:none}
 .j-hero{position:absolute;inset:0;z-index:12;display:flex;align-items:center;opacity:0;pointer-events:none;
   background:linear-gradient(90deg,rgba(20,15,11,.9) 0%,rgba(20,15,11,.7) 45%,rgba(20,15,11,.25) 100%)}
 .j-hero.on{pointer-events:auto}
-@media(max-width:700px){.j-hero{background:linear-gradient(180deg,rgba(20,15,11,.55),rgba(20,15,11,.88))}.j-progress{right:12px}.j-skip{bottom:96px}.j-caps{bottom:22%}}
+@media(max-width:700px){.j-hero{background:linear-gradient(180deg,rgba(20,15,11,.55),rgba(20,15,11,.88))}.j-progress{right:12px}.j-skip{bottom:96px}.j-hint{bottom:96px}.j-caps{bottom:22%}}
 @media(prefers-reduced-motion:reduce){.journey{height:100vh}.j-layer{opacity:0!important}.j-layer.j-last{opacity:1!important}.j-cap,.j-hint,.j-progress{display:none}.j-hero{opacity:1;pointer-events:auto}}
 body.en .tate{writing-mode:horizontal-tb;letter-spacing:.06em;font-size:clamp(40px,6vw,72px)}
 body.en .tate span{display:block;letter-spacing:.3em;margin:10px 0 0}
@@ -210,8 +210,8 @@ body.en .logo{letter-spacing:.08em}
 .journey.done{height:100vh;height:100svh}
 .journey.done .j-layer{opacity:0!important;transform:none!important}
 .journey.done .j-layer.j-last{opacity:1!important}
-.journey.done .j-cap,.journey.done .j-skip,.journey.done .j-progress{display:none}
-.journey.done .j-hero{opacity:1!important;pointer-events:auto}
+.journey.done .j-cap,.journey.done .j-skip,.journey.done .j-hint,.journey.done .j-progress{display:none}
+.journey.done .j-hero{opacity:1!important;pointer-events:auto;transition:opacity .8s ease}
 </style>
 </head>
 <body>
@@ -242,6 +242,7 @@ body.en .logo{letter-spacing:.08em}
     <div class="j-layer" data-o="78% 40%" style="background-image:url('https://images.unsplash.com/photo-1674949018662-02044a6b2b1a?auto=format&fit=crop&w=1600&q=75');background-position:78% 40%;transform-origin:78% 40%"></div><div class="j-layer" data-o="38% 62%" style="background-image:url('https://images.unsplash.com/photo-1614640522775-71bebddd21f9?auto=format&fit=crop&w=1600&q=75');background-position:38% 62%;transform-origin:38% 62%"></div><div class="j-layer" data-o="50% 62%" style="background-image:url('https://images.unsplash.com/photo-1610205642154-5dfed9199eae?auto=format&fit=crop&w=1600&q=75');background-position:50% 62%;transform-origin:50% 62%"></div><div class="j-layer" data-o="62% 55%" style="background-image:url('https://images.unsplash.com/photo-1600506112440-cd3b52c88cfe?auto=format&fit=crop&w=1600&q=75');background-position:62% 55%;transform-origin:62% 55%"></div><div class="j-layer j-last" data-o="50% 50%" style="background-image:url('https://images.unsplash.com/photo-1696449241254-11cf7f18ce32?auto=format&fit=crop&w=1600&q=75');background-position:50% 50%;transform-origin:50% 50%"></div>
     <div class="j-shade"></div>
     <div class="j-caps"><p class="j-cap mincho" data-ja="小田中の住宅街に、ぽつりと灯る明かり。" data-en="A single warm light on a quiet Kodanaka street.">小田中の住宅街に、ぽつりと灯る明かり。</p><p class="j-cap mincho" data-ja="木の格子戸の向こうから、だしの香り。" data-en="Through the wooden lattice door — the scent of dashi.">木の格子戸の向こうから、だしの香り。</p><p class="j-cap mincho" data-ja="暖簾をくぐれば、" data-en="Step under the noren curtain…">暖簾をくぐれば、</p><p class="j-cap mincho" data-ja="カウンターの向こうに、マスター。" data-en="…and the master is waiting behind the counter.">カウンターの向こうに、マスター。</p></div>
+    <div class="j-hint" data-ja="スクロールして、お店の中へ" data-en="Scroll to step inside">スクロールして、お店の中へ</div>
     <button class="j-skip" type="button" data-ja="スキップ" data-en="Skip">スキップ</button>
     <div class="j-progress"><span></span></div>
     <div class="j-hero">
@@ -423,45 +424,51 @@ btns.forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
 document.querySelectorAll('.fade').forEach(el=>io.observe(el));
 
-// ===== walk-in journey (plays once per page load) =====
+// ===== walk-in journey (scroll-driven, once per page load) =====
 (function(){
   const sec=document.querySelector('.journey'); if(!sec) return;
   const L=[...sec.querySelectorAll('.j-layer')], C=[...sec.querySelectorAll('.j-cap')];
-  const hero=sec.querySelector('.j-hero'), bar=sec.querySelector('.j-progress span'), skip=sec.querySelector('.j-skip');
-  const N=L.length, T=N-1, DUR=T*1900+900;   // ~1.9s per scene, then the title
+  const hero=sec.querySelector('.j-hero'), bar=sec.querySelector('.j-progress span'), skip=sec.querySelector('.j-skip'), hint=sec.querySelector('.j-hint');
+  const N=L.length, T=N-1;
   const sm=(a,b,x)=>{x=Math.min(1,Math.max(0,(x-a)/(b-a)));return x*x*(3-2*x)};
-  let done=false, t0=null;
-  function finish(){
+  let done=false, ticking=false;
+  const block=e=>e.preventDefault();
+  function finish(keepScroll){
     if(done) return; done=true;
-    sec.classList.add('done'); hero.style.opacity=1;
+    sec.classList.add('done');
+    if(!keepScroll){
+      // land on the finished main visual and absorb leftover scroll momentum
+      window.scrollTo(0,0);
+      addEventListener('wheel',block,{passive:false}); addEventListener('touchmove',block,{passive:false});
+      setTimeout(()=>{removeEventListener('wheel',block);removeEventListener('touchmove',block)},900);
+    }
   }
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){finish();return}
-  function frame(now){
-    if(done) return;
-    if(t0===null) t0=now;
-    const p=Math.min(1,(now-t0)/DUR);
-    const walk=Math.min(1,p*DUR/(T*1900))*T;
-    const i=Math.min(T-1,Math.floor(walk)), t=walk-i;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){finish(true);return}
+  function draw(){
+    ticking=false; if(done) return;
+    const total=sec.offsetHeight-innerHeight;
+    const p=Math.min(1,Math.max(0,-sec.getBoundingClientRect().top/total));
+    const walk=p*T, i=Math.min(T-1,Math.floor(walk)), t=walk-i;
     L.forEach((el,k)=>{
       let o=0,sc=1;
       if(k===i){o=1-sm(.55,1,t);sc=1+t*1.35}
       else if(k===i+1){o=sm(.55,1,t);sc=1+(1-t)*.12}
-      if(walk>=T&&k===N-1){o=1;sc=1}
       el.style.opacity=o; el.style.transform='scale('+sc.toFixed(4)+')'; el.style.zIndex=N-k;
     });
     C.forEach((el,k)=>{
       const lt=walk-k, o=sm(.05,.3,lt)*(1-sm(.6,.85,lt));
       el.style.opacity=o; el.style.transform='translateY('+((1-o)*14).toFixed(1)+'px)';
     });
-    hero.style.opacity=sm(.86,1,p);
+    hint.style.opacity=1-sm(0,.04,p);
     bar.style.height=(p*100)+'%';
-    if(p>=1){finish();return}
-    requestAnimationFrame(frame);
+    if(p>=0.985) finish(false);
   }
-  skip.addEventListener('click',finish);
-  // in-page links skip straight to the finished state
-  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',finish));
-  requestAnimationFrame(frame);
+  addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(draw)}},{passive:true});
+  addEventListener('resize',draw);
+  skip.addEventListener('click',()=>finish(false));
+  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',()=>finish(true)));
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  window.scrollTo(0,0); draw();
 })();
 </script>
 </body>
