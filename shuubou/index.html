@@ -206,6 +206,11 @@ body:not(.en) .en-only{display:none}
 body.en .tate{writing-mode:horizontal-tb;letter-spacing:.06em;font-size:clamp(40px,6vw,72px)}
 body.en .tate span{display:block;letter-spacing:.3em;margin:10px 0 0}
 body.en .logo{letter-spacing:.08em}
+.journey.done{height:100vh;height:100svh}
+.journey.done .j-layer{opacity:0!important;transform:none!important}
+.journey.done .j-layer:last-of-type{opacity:1!important}
+.journey.done .j-cap,.journey.done .j-hint,.journey.done .j-progress{display:none}
+.journey.done .j-hero{opacity:1!important;pointer-events:auto}
 </style>
 </head>
 <body>
@@ -425,9 +430,19 @@ document.querySelectorAll('.fade').forEach(el=>io.observe(el));
   const N=L.length, T=N-1;               // T transitions, then a hold for the hero text
   const sm=(a,b,x)=>{x=Math.min(1,Math.max(0,(x-a)/(b-a)));return x*x*(3-2*x)};
   if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  let ticking=false;
+  let ticking=false, done=false;
+  function finish(){
+    if(done) return; done=true;
+    const before=sec.offsetHeight;
+    sec.classList.add('done');
+    const diff=before-sec.offsetHeight;
+    window.scrollTo(0,Math.max(0,scrollY-diff));
+    try{sessionStorage.setItem('shuubou-walked','1')}catch(e){}
+  }
+  try{if(sessionStorage.getItem('shuubou-walked')==='1'){finish();return}}catch(e){}
   function draw(){
     ticking=false;
+    if(done) return;
     const r=sec.getBoundingClientRect(), total=sec.offsetHeight-innerHeight;
     const p=Math.min(1,Math.max(0,-r.top/total));
     const walk=Math.min(1,p/0.8)*T;     // first 80% = walking in
@@ -447,6 +462,7 @@ document.querySelectorAll('.fade').forEach(el=>io.observe(el));
     hero.style.opacity=h; hero.classList.toggle('on',h>.5);
     hint.style.opacity=1-sm(0,.04,p);
     bar.style.height=(Math.min(1,p/0.8)*100)+'%';
+    if(p>=0.97) finish();
   }
   addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(draw)}},{passive:true});
   addEventListener('resize',draw); draw();
