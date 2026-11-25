@@ -37,7 +37,8 @@ header.solid .nav{color:var(--ink)}
 .hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--dark)}
 .hero .bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=75") center/cover;transform:scale(1.08);animation:heroZoom 14s ease-out forwards}
 @keyframes heroZoom{to{transform:scale(1)}}
-.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.75) 100%)}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.72) 0%,rgba(0,0,0,.45) 45%,rgba(0,0,0,.1) 100%),linear-gradient(180deg,rgba(0,0,0,.25) 0%,transparent 30%,rgba(0,0,0,.55) 100%)}
+@media(max-width:700px){.hero::after{background:linear-gradient(180deg,rgba(0,0,0,.35) 0%,rgba(0,0,0,.55) 45%,rgba(0,0,0,.85) 100%)}}
 .hero .in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 24px 110px;width:100%}
 .kicker{display:inline-block;font-size:12px;letter-spacing:.3em;border-left:3px solid var(--ac);padding-left:12px;margin-bottom:22px;opacity:0;animation:up .9s .2s forwards}
 .hero h1{font-size:clamp(32px,5.4vw,64px);letter-spacing:.1em;line-height:1.45;opacity:0;animation:up 1s .4s forwards;text-shadow:0 2px 30px rgba(0,0,0,.35)}
