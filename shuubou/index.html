@@ -190,18 +190,18 @@ body:not(.en) .en-only{display:none}
 .j-stage{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;color:var(--paper)}
 .j-layer{position:absolute;inset:0;background-size:cover;will-change:transform,opacity;opacity:0}
 .j-layer:first-child{opacity:1}
-.j-shade{position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.55) 100%)}
-.j-caps{position:absolute;left:0;right:0;bottom:16%;text-align:center;pointer-events:none;padding:0 24px}
+.j-shade{position:absolute;inset:0;z-index:10;pointer-events:none;background:radial-gradient(ellipse at center,transparent 35%,rgba(0,0,0,.55) 100%)}
+.j-caps{position:absolute;z-index:11;left:0;right:0;bottom:16%;text-align:center;pointer-events:none;padding:0 24px}
 .j-cap{position:absolute;left:0;right:0;font-size:clamp(20px,3.2vw,34px);letter-spacing:.18em;opacity:0;transform:translateY(14px);text-shadow:0 2px 18px rgba(0,0,0,.8);font-weight:600}
-.j-hint{position:absolute;left:50%;bottom:34px;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;color:var(--wood-light);transition:opacity .4s}
+.j-hint{position:absolute;z-index:13;left:50%;bottom:34px;transform:translateX(-50%);font-size:11px;letter-spacing:.3em;color:var(--wood-light);transition:opacity .4s}
 .j-hint::after{content:"";display:block;width:1px;height:38px;margin:10px auto 0;background:linear-gradient(var(--wood-light),transparent);animation:hint 1.8s ease-in-out infinite}
 @keyframes hint{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
-.j-progress{position:absolute;right:22px;top:50%;width:2px;height:120px;margin-top:-60px;background:rgba(255,255,255,.15)}
+.j-progress{position:absolute;z-index:13;right:22px;top:50%;width:2px;height:120px;margin-top:-60px;background:rgba(255,255,255,.15)}
 .j-progress span{display:block;width:100%;height:0;background:var(--amber)}
-.j-hero{position:absolute;inset:0;display:flex;align-items:center;opacity:0;pointer-events:none;
+.j-hero{position:absolute;inset:0;z-index:12;display:flex;align-items:center;opacity:0;pointer-events:none;
   background:linear-gradient(90deg,rgba(20,15,11,.9) 0%,rgba(20,15,11,.7) 45%,rgba(20,15,11,.25) 100%)}
 .j-hero.on{pointer-events:auto}
-@media(max-width:700px){.j-hero{background:linear-gradient(180deg,rgba(20,15,11,.55),rgba(20,15,11,.88))}.j-progress{right:12px}}
+@media(max-width:700px){.j-hero{background:linear-gradient(180deg,rgba(20,15,11,.55),rgba(20,15,11,.88))}.j-progress{right:12px}.j-hint{bottom:96px}.j-caps{bottom:22%}}
 @media(prefers-reduced-motion:reduce){.journey{height:100vh}.j-layer{opacity:0!important}.j-layer:last-of-type{opacity:1!important}.j-cap,.j-hint,.j-progress{display:none}.j-hero{opacity:1;pointer-events:auto}}
 </style>
 </head>
