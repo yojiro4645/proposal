@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>北信住設｜中野市の住宅設備・水まわりリフォーム</title>
+<meta name="description" content="長野県中野市小田中の北信住設。キッチン・お風呂・トイレ・洗面などの水まわりリフォーム、住宅設備のご相談に。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f6faf9;--ink:#1d2b2a;--dark:#14403c;--dark2:#195049;--ac:#1f9a8a;--ac2:#f2b84b;--muted:#5f706e;--line:rgba(20,64,60,.12);--hf:"Zen Maru Gothic",sans-serif;--bf:"Zen Kaku Gothic New",sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--bf);color:var(--ink);background:var(--bg);line-height:1.9;letter-spacing:.04em;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--hf);font-weight:700;letter-spacing:.08em;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+section{padding:110px 0}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(255,255,255,.96);box-shadow:0 1px 0 var(--line)}
+.nav{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 22px;color:#fff;transition:color .3s}
+header.solid .nav{color:var(--ink)}
+.logo{font-family:var(--hf);font-weight:800;font-size:20px;letter-spacing:.14em;line-height:1.2}
+.logo small{display:block;font-family:var(--bf);font-size:10px;letter-spacing:.32em;opacity:.75;font-weight:500}
+.nav ul{display:flex;gap:28px;list-style:none;font-size:13px;letter-spacing:.12em}
+.nav ul a:hover{color:var(--ac)}
+.tel-btn{display:inline-flex;align-items:center;gap:8px;background:var(--ac);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:3px;letter-spacing:.08em;white-space:nowrap}
+.tel-btn small{font-weight:500;font-size:10px;opacity:.85;display:block;letter-spacing:.1em}
+@media(max-width:900px){.nav ul{display:none}.nav .tel-btn{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--dark)}
+.hero .bg{position:absolute;inset:0;background:url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=75") center/cover;transform:scale(1.08);animation:heroZoom 14s ease-out forwards}
+@keyframes heroZoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.25) 0%,rgba(0,0,0,.15) 35%,rgba(0,0,0,.75) 100%)}
+.hero .in{position:relative;z-index:2;max-width:1180px;margin:0 auto;padding:0 24px 110px;width:100%}
+.kicker{display:inline-block;font-size:12px;letter-spacing:.3em;border-left:3px solid var(--ac);padding-left:12px;margin-bottom:22px;opacity:0;animation:up .9s .2s forwards}
+.hero h1{font-size:clamp(32px,5.4vw,64px);letter-spacing:.1em;line-height:1.45;opacity:0;animation:up 1s .4s forwards;text-shadow:0 2px 30px rgba(0,0,0,.35)}
+.hero p.lead{max-width:560px;margin-top:22px;font-size:15.5px;opacity:0;animation:up 1s .65s forwards;color:rgba(255,255,255,.9)}
+.hero .cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;opacity:0;animation:up 1s .85s forwards}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 26px;font-weight:700;font-size:15px;letter-spacing:.1em;border-radius:3px}
+.btn.pri{background:var(--ac);color:#fff}
+.btn.ghost{border:1px solid rgba(255,255,255,.7);color:#fff}
+.hero .hours{margin-top:22px;font-size:12.5px;letter-spacing:.14em;opacity:0;animation:up 1s 1s forwards;color:rgba(255,255,255,.8)}
+@keyframes up{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.scroll{position:absolute;right:28px;bottom:36px;z-index:2;writing-mode:vertical-rl;font-size:10px;letter-spacing:.35em;color:rgba(255,255,255,.7)}
+.scroll::after{content:"";display:block;width:1px;height:60px;margin:12px auto 0;background:rgba(255,255,255,.6);animation:line 2s infinite}
+@keyframes line{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+
+/* section head */
+.sh{margin-bottom:54px}
+.sh .en{display:block;font-family:"Oswald",var(--bf);font-size:12px;letter-spacing:.42em;color:var(--ac);font-weight:600;margin-bottom:8px}
+.sh h2{font-size:clamp(26px,3.4vw,38px)}
+.dark{background:var(--dark);color:#fff}
+.dark .sh .en{color:var(--ac2)}
+
+/* strengths */
+.pts{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+.pt{background:#fff;padding:38px 30px;border-top:3px solid var(--ac);box-shadow:0 18px 40px -28px rgba(0,0,0,.35)}
+.pt .num{font-family:"Oswald",var(--hf);font-size:34px;color:var(--ac);line-height:1;margin-bottom:14px;font-weight:600}
+.pt h3{font-size:19px;margin-bottom:10px}
+.pt p{font-size:14.5px;color:var(--muted)}
+@media(max-width:860px){.pts{grid-template-columns:1fr}}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.about .ph{aspect-ratio:4/5;overflow:hidden;border-radius:2px}
+.about .ph img{width:100%;height:100%;object-fit:cover}
+.about h2{font-size:clamp(24px,3vw,34px);margin-bottom:24px}
+.about p{margin-bottom:16px;font-size:15.5px;color:rgba(255,255,255,.85)}
+@media(max-width:860px){.about{grid-template-columns:1fr;gap:34px}.about .ph{aspect-ratio:16/10}}
+
+/* services */
+.svcs{display:grid;grid-template-columns:repeat(2,1fr);gap:28px}
+.svc{background:#fff;display:grid;grid-template-columns:1fr 1.1fr;overflow:hidden;border-radius:2px;box-shadow:0 18px 40px -30px rgba(0,0,0,.4)}
+.svc .ph{overflow:hidden;min-height:200px}
+.svc .ph img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s ease}
+.svc:hover .ph img{transform:scale(1.06)}
+.svc .tx{padding:28px 26px;display:flex;flex-direction:column;justify-content:center}
+.svc h3{font-size:18px;margin-bottom:8px}
+.svc p{font-size:14px;color:var(--muted)}
+@media(max-width:860px){.svcs{grid-template-columns:1fr}.svc{grid-template-columns:1fr}.svc .ph{aspect-ratio:16/9;min-height:0}}
+
+/* flow */
+.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:f}
+.flow li{list-style:none;padding:30px 22px;border-left:1px solid var(--line);position:relative;counter-increment:f}
+.flow li:first-child{border-left:0}
+.flow li::before{content:"STEP " counter(f);font-family:"Oswald",var(--bf);font-size:12px;letter-spacing:.3em;color:var(--ac);font-weight:600}
+.flow h3{font-size:17px;margin:10px 0 6px}
+.flow p{font-size:13.5px;color:var(--muted)}
+@media(max-width:860px){.flow{grid-template-columns:1fr}.flow li{border-left:0;border-top:1px solid var(--line)}.flow li:first-child{border-top:0}}
+
+/* voice */
+.voice-sec{background:#fff}
+.score{display:flex;align-items:baseline;gap:14px;margin:-28px 0 34px}
+.score b{font-family:"Oswald",var(--hf);font-size:52px;line-height:1;color:var(--ac)}
+.score small{color:var(--muted);font-size:13px;letter-spacing:.12em}
+.voices{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.voices li{background:var(--bg);padding:30px 28px;border-radius:2px;position:relative}
+.voices li::before{content:"“";position:absolute;top:-6px;left:18px;font-size:64px;color:var(--ac);font-family:Georgia,serif;opacity:.5}
+.voices p{font-size:15px}
+.voices span{display:block;margin-top:14px;font-size:11.5px;color:var(--muted);letter-spacing:.1em}
+
+/* cta */
+.cta-sec{text-align:center;background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.7)),url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1800&q=75") center/cover fixed;color:#fff;padding:120px 0}
+.cta-sec h2{font-size:clamp(26px,3.6vw,40px);margin-bottom:16px}
+.cta-sec p{color:rgba(255,255,255,.85)}
+.bigtel{display:inline-flex;flex-direction:column;align-items:center;margin-top:34px;background:var(--ac);padding:20px 44px;border-radius:4px}
+.bigtel b{font-family:"Oswald",var(--hf);font-size:clamp(30px,5vw,46px);letter-spacing:.06em;line-height:1.2}
+.bigtel small{font-size:12px;letter-spacing:.14em;opacity:.9}
+@media(max-width:860px){.cta-sec{background-attachment:scroll}}
+
+/* info */
+.info-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:46px}
+.info{width:100%;border-collapse:collapse;font-size:15px}
+.info th,.info td{text-align:left;vertical-align:top;padding:16px 0;border-bottom:1px solid var(--line)}
+.info th{width:120px;color:var(--muted);font-weight:500;font-size:13px;letter-spacing:.14em}
+.map{width:100%;min-height:340px;height:100%;border:0;border-radius:2px}
+@media(max-width:860px){.info-grid{grid-template-columns:1fr}}
+
+footer{background:var(--dark);color:rgba(255,255,255,.7);text-align:center;padding:46px 20px 110px;font-size:12px;letter-spacing:.12em}
+footer .logo{color:#fff;margin-bottom:8px}
+.callbar{display:none}
+@media(max-width:900px){.callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:rgba(255,255,255,.97);box-shadow:0 -1px 0 var(--line);padding:10px 12px;gap:10px}
+ .callbar a{flex:1;text-align:center;padding:12px;font-weight:700;font-size:14px;border-radius:3px;letter-spacing:.08em}
+ .callbar .c1{background:var(--ac);color:#fff}.callbar .c2{border:1px solid var(--line)}}
+.fade{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
+.fade.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.fade{opacity:1;transform:none}.hero .bg{animation:none;transform:none}.kicker,.hero h1,.hero p.lead,.hero .cta,.hero .hours{animation:none;opacity:1}}
+</style>
+</head>
+<body>
+<header id="hd">
+  <nav class="nav">
+    <a href="#top" class="logo">北信住設<small>HOKUSHIN JUSETSU</small></a>
+    <ul>
+      <li><a href="#strength">選ばれる理由</a></li>
+      <li><a href="#service">対応工事</a></li>
+      <li><a href="#flow">ご依頼の流れ</a></li>
+      <li><a href="#voice">お客様の声</a></li>
+      <li><a href="#info">会社概要</a></li>
+    </ul>
+    <a class="tel-btn" href="tel:09033332909"><span><small>お電話でのご相談</small>☎ 090-3333-2909</span></a>
+  </nav>
+</header>
+
+<div class="hero" id="top">
+  <div class="bg"></div>
+  <div class="in">
+    <span class="kicker">長野県中野市小田中の住宅設備屋さん</span>
+    <h1>毎日つかう場所を、<br>もっと快適に。</h1>
+    <p class="lead">キッチン・お風呂・トイレ・洗面などの水まわりから、住宅設備のちょっとした困りごとまで。地元中野でていねいに対応します。</p>
+    <div class="cta">
+      <a class="btn pri" href="tel:09033332909">☎ 090-3333-2909</a>
+      <a class="btn ghost" href="#service">対応工事を見る</a>
+    </div>
+    <p class="hours">月〜土 8:30〜17:00（日曜定休）</p>
+  </div>
+  <div class="scroll">SCROLL</div>
+</div>
+
+<section id="strength">
+  <div class="wrap">
+    <div class="sh fade"><span class="en">STRENGTH</span><h2>選ばれる理由</h2></div>
+    <div class="pts"><div class="pt fade"><div class="num">01</div><h3>ていねいな対応と施工</h3><p>「丁寧な対応と施工でとても満足」——いただいた声を励みに、一件一件に向き合っています。</p></div><div class="pt fade"><div class="num">02</div><h3>地元・中野市小田中から</h3><p>近くだから、相談も、施工後のちょっとした気がかりも、気軽に声をかけていただけます。</p></div><div class="pt fade"><div class="num">03</div><h3>住まいの設備まるごと</h3><p>水まわりのリフォームから設備の交換まで。どこに頼めばいいか分からないことも、まずはご相談ください。</p></div></div>
+  </div>
+</section>
+
+<section class="dark">
+  <div class="wrap about">
+    <div class="ph fade"><img src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&fit=crop&w=1000&q=75" alt="" loading="lazy"></div>
+    <div class="fade"><div class="sh" style="margin-bottom:18px"><span class="en">ABOUT</span></div><h2>暮らしの「ちょっと不便」を、そのままにしない。</h2><p>蛇口の水漏れ、冬場の冷たいお風呂、古くなったキッチン。毎日のことだからこそ、小さな不便が積み重なります。</p><p>北信住設は中野市小田中で住宅設備の仕事をしています。ご家族の暮らし方を伺いながら、ちょうどいいリフォームをご提案します。</p></div>
+  </div>
+</section>
+
+<section id="service">
+  <div class="wrap">
+    <div class="sh fade"><span class="en">SERVICE</span><h2>対応工事</h2></div>
+    <div class="svcs"><article class="svc fade"><div class="ph"><img src="https://images.unsplash.com/photo-1758315417321-83eb30a39710?auto=format&fit=crop&w=800&h=560&q=75" alt="" loading="lazy"></div><div class="tx"><h3>キッチン</h3><p>システムキッチンの入れ替えや、水栓・コンロまわりの交換。</p></div></article><article class="svc fade"><div class="ph"><img src="https://images.unsplash.com/photo-1781344334947-60c704bafd51?auto=format&fit=crop&w=800&h=560&q=75" alt="" loading="lazy"></div><div class="tx"><h3>お風呂</h3><p>ユニットバスへの入れ替えなど、浴室のリフォーム。</p></div></article><article class="svc fade"><div class="ph"><img src="https://images.unsplash.com/photo-1781344334901-cfd593c38145?auto=format&fit=crop&w=800&h=560&q=75" alt="" loading="lazy"></div><div class="tx"><h3>トイレ・洗面</h3><p>トイレ・洗面台の交換や、使いやすさを考えたリフォーム。</p></div></article><article class="svc fade"><div class="ph"><img src="https://images.unsplash.com/photo-1676210134188-4c05dd172f89?auto=format&fit=crop&w=800&h=560&q=75" alt="" loading="lazy"></div><div class="tx"><h3>水まわりの修理・設備交換</h3><p>水漏れ・つまり、給湯器などの設備のご相談。</p></div></article></div>
+  </div>
+</section>
+
+<section id="flow" style="background:#fff">
+  <div class="wrap">
+    <div class="sh fade"><span class="en">FLOW</span><h2>ご依頼の流れ</h2></div>
+    <ol class="flow fade">
+      <li><h3>お電話でご相談</h3><p>気になる箇所や状況を、お電話でお聞かせください。</p></li>
+      <li><h3>現地の確認</h3><p>実際に現場を見て、状態を確認します。</p></li>
+      <li><h3>お見積もり</h3><p>工事の内容と費用をご説明します。</p></li>
+      <li><h3>施工</h3><p>ご納得いただいてから、工事に取りかかります。</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="voice" class="voice-sec"><div class="wrap"><div class="sh fade"><span class="en">VOICE</span><h2>お客様の声</h2></div>
+<div class="score fade"><b>5.0</b><small>Googleクチコミ 1件</small></div><ul class="voices"><li class="fade"><p>ていねいな対応と施工でとても満足です！迷いなく星5つです。</p><span>Googleマップのクチコミより</span></li></ul></div></section>
+
+<section class="cta-sec">
+  <div class="wrap fade">
+    <h2>水まわりのお困りごと、お気軽に。</h2>
+    <p>お見積もりのご相談だけでも大丈夫です。お電話でご連絡ください。</p>
+    <a class="bigtel" href="tel:09033332909"><small>お電話でのお問い合わせ</small><b>090-3333-2909</b><small>月〜土 8:30〜17:00（日曜定休）</small></a>
+  </div>
+</section>
+
+<section id="info">
+  <div class="wrap">
+    <div class="sh fade"><span class="en">COMPANY</span><h2>会社概要・アクセス</h2></div>
+    <div class="info-grid">
+      <table class="info fade">
+        <tr><th>名称</th><td>北信住設</td></tr>
+        <tr><th>所在地</th><td>〒383-0037 長野県中野市小田中412-11</td></tr>
+        <tr><th>電話</th><td><a href="tel:09033332909">090-3333-2909</a></td></tr>
+        <tr><th>営業時間</th><td>月〜土 8:30〜17:00（日曜定休）</td></tr>
+        <tr><th>定休日</th><td>日曜日</td></tr>
+      </table>
+      <iframe class="map fade" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="地図" src="https://www.google.com/maps?q=%E5%8C%97%E4%BF%A1%E4%BD%8F%E8%A8%AD%20%E9%95%B7%E9%87%8E%E7%9C%8C%E4%B8%AD%E9%87%8E%E5%B8%82%E5%B0%8F%E7%94%B0%E4%B8%AD412-11&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">北信住設</div>
+  <p>〒383-0037 長野県中野市小田中412-11 ／ 090-3333-2909</p>
+  <p style="margin-top:8px;font-size:10px;opacity:.6">Photos: Unsplash（イメージ）</p>
+</footer>
+
+<div class="callbar">
+  <a class="c1" href="tel:09033332909">☎ 電話で相談</a>
+  <a class="c2" href="#info">アクセス</a>
+</div>
+
+<script>
+const hd=document.getElementById('hd');
+const onS=()=>hd.classList.toggle('solid',scrollY>innerHeight*0.6);
+addEventListener('scroll',onS,{passive:true});onS();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
